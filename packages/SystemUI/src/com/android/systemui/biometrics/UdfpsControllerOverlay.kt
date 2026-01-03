@@ -18,7 +18,6 @@ package com.android.systemui.biometrics
 
 import android.annotation.SuppressLint
 import android.annotation.UiThread
-import android.content.Context
 import android.graphics.PixelFormat
 import android.graphics.Rect
 import android.hardware.biometrics.BiometricRequestConstants.REASON_AUTH_BP
@@ -70,7 +69,6 @@ private const val TAG = "UdfpsControllerOverlay"
 @UiThread
 class UdfpsControllerOverlay
 constructor(
-    private val context: Context,
     private val inflater: LayoutInflater,
     private val windowManager: WindowManager,
     private val accessibilityManager: AccessibilityManager,

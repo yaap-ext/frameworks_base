@@ -398,6 +398,7 @@ public class Clock extends TextView implements
                 filter.addAction(Intent.ACTION_SCREEN_ON);
                 mBroadcastDispatcher.registerReceiver(mScreenReceiver, filter);
             }
+            setFontFeatureSettings("tnum");
         } else {
             if (mSecondsHandler != null) {
                 mScreenReceiverRegistered = false;
@@ -406,6 +407,7 @@ public class Clock extends TextView implements
                 mSecondsHandler = null;
                 updateClock();
             }
+            setFontFeatureSettings(null);
         }
     }
 
